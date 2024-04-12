@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootstrapFile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+    <!-- navbar section -->
+    <nav class="navbar navbar-expand-lg bg-dark py-3">  <!-- py-3 上下パディングを加える。cf. Utility > Spacing -->
+        <!-- container fluidだとどんな状況でも100%サイズになってしまう。左側の余白が狭くなってしまう。 -->
+        <!-- max-width が100%のままになってしまうが、fluidを取るとpx値になる。-->
+         <!-- p m などについてはDocuments の Spacing を参照-->
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <h2 class="text-white pt-1">Bootstrap5</h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> <!-- リストが右側に寄る -->
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>  <!-- aria-current="page"は消す（aria-currentとは？） -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <button class="btn btn-primary ms-2">Join us</button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <!-- hero section 2024/04/10 -->
+      <div class="hero vh-100 d-flex align-items-center" id="home">  <!-- 高さを持たせるためにビューポート100% 上下真ん中に寄せたいのでflex align-itemsを入れる-->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 mx-auto text-center"> <!-- lgについてはDocuments の Breakpoint を参照。レイアウトの起点となる。7/12を表している。マージンクラスmx-autoで左右センタリング-->
+              <h1 class="display-4 text-white">Bootstrap5 Page</h1>  <!--フォントの重みをdisplay-4で補正-->
+              <p class="text-white my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsum exercitationem aspernatur, culpa officia aliquam. Autem at, voluptatem in esse rem fuga rerum corporis quidem tenetur, ratione vero neque voluptas.</p>
+              <a href="#" class="btn btn-primary me-5">Go Page</a>
+              <a href="#" class="btn btn-outline-light">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Section -->
+      <section id="services"><!--文書の章や節を示す役割を持ちます。 文章の一つのまとまりを作るために使うので、例えばブログ記事であれば、記事内のテーマごとに区切ってそれぞれをsectionタグで囲む-->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-primary">SERVICES</h6>
+              <h1>Services</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, natus dignissimos, nemo quia, corrupti explicabo doloribus ab id maxime eos distinctio ex harum facilis provident delectus deleniti consequuntur quas quod.</p>
+            </div>
+          </div>
+          <div class="row g-4"> <!-- BOX間のギャップが無かったのでg-4で開ける-->
+            <div class="col-lg-4 col-sm-6"> <!--　12分割のうち4占めるので総じて3分割ボックスになる smでは12分割のうち6占めるので総じて2分割ボックスになる。 -->
+              <div class="service card-effect">
+                <div class="icon-box">
+                  <i class='bx bxs-comment-detail'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nisi natus! Necessitatibus deleniti eos sit.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6"> <!--　12分割のうち4占めるので総じて3分割ボックスになる smでは12分割のうち6占めるので総じて2分割ボックスになる。 -->
+              <div class="service card-effect">
+                <div class="icon-box">
+                  <i class='bx bxs-comment-detail'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nisi natus! Necessitatibus deleniti eos sit.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6"> <!--　12分割のうち4占めるので総じて3分割ボックスになる smでは12分割のうち6占めるので総じて2分割ボックスになる。 -->
+              <div class="service card-effect">
+                <div class="icon-box">
+                  <i class='bx bxs-comment-detail'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nisi natus! Necessitatibus deleniti eos sit.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6"> <!--　12分割のうち4占めるので総じて3分割ボックスになる smでは12分割のうち6占めるので総じて2分割ボックスになる。 -->
+              <div class="service card-effect">
+                <div class="icon-box">
+                  <i class='bx bxs-comment-detail'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nisi natus! Necessitatibus deleniti eos sit.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6"> <!--　12分割のうち4占めるので総じて3分割ボックスになる smでは12分割のうち6占めるので総じて2分割ボックスになる。 -->
+              <div class="service card-effect">
+                <div class="icon-box">
+                  <i class='bx bxs-comment-detail'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nisi natus! Necessitatibus deleniti eos sit.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6"> <!--　12分割のうち4占めるので総じて3分割ボックスになる smでは12分割のうち6占めるので総じて2分割ボックスになる。 -->
+              <div class="service card-effect">
+                <div class="icon-box">
+                  <i class='bx bxs-comment-detail'></i>
+                </div>
+                <h5 class="mt-4 mb-2">Service</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, nisi natus! Necessitatibus deleniti eos sit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="row py-0 bg-light">  <!-- flexを親に充てており、その下がcolなので画像が中途半端になる py-0にした理由はcssのsection定義により余白が加味されたから-->
+        <div class="col-lg-6 col-img"></div>   <!--左半分-->
+        <div class="col-lg-6">
+          <div class="container">
+            <div class="row mt-5"> 
+              <div class="col-md-10 pt-4 offset-md-1"> <!--6のうちのさらに10/12  offset-md-1で写真から引き離す。-->
+                <h6 class="text-primary">Why to choose us?</h6>
+                <h1>Create your Idea</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corporis dolore, impedit tempora alias obcaecati.</p>
+
+                <div class="fearure d-flex"><!--アイコンと文字を横並びにしたい-->
+                  <div class="icon-box me-3">
+                    <i class='bx bxs-comment-detail'></i>
+                  </div>
+                  <div>
+                    <h5>Create</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                  </div>
+                </div>
+
+                <div class="fearure d-flex">
+                  <div class="icon-box me-3">
+                    <i class='bx bxs-comment-detail'></i>
+                  </div>
+                  <div>
+                    <h5>Create</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                  </div>
+                </div>
+
+                <div class="fearure d-flex">
+                  <div class="icon-box me-3">
+                    <i class='bx bxs-comment-detail'></i>
+                  </div>
+                  <div>
+                    <h5>Create</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Project Section -->
+      <section id="projects"><!--Service Sectionと構成が似ているので複製-->
+        <div class="container-fluid"> <!--エリアを100%占めるようにする-->
+          <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-primary">PROJECTS</h6>
+              <h1>Recent Project</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, natus dignissimos, nemo quia, corrupti explicabo doloribus ab id maxime eos distinctio ex harum facilis provident delectus deleniti consequuntur quas quod.</p>
+            </div>
+          </div>
+
+          <div class="row g-3">   <!--写真同士のギャップを開ける-->
+            <div class="col-lg-4 col-sm-6">
+              <div class="project">
+                <img src="./img/deckard.jpg" alt="">
+                <div class="overlay">
+                  <div>
+                    <h4 class="text-white">Project Title</h4>
+                    <h6 class="text-white">Website Design</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+              <div class="project">
+                <img src="./img/don01.jpg" alt="">
+                <div class="overlay">
+                  <div>
+                    <h4 class="text-white">Project Title</h4>
+                    <h6 class="text-white">Website Design</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+              <div class="project">
+                <img src="./img/futatu01.jpg" alt="">
+                <div class="overlay">
+                  <div>
+                    <h4 class="text-white">Project Title</h4>
+                    <h6 class="text-white">Website Design</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+              <div class="project">
+                <img src="./img/jyuubunn.jpg" alt="">
+                <div class="overlay">
+                  <div>
+                    <h4 class="text-white">Project Title</h4>
+                    <h6 class="text-white">Website Design</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+              <div class="project">
+                <img src="./img/yottu.jpg" alt="">
+                <div class="overlay">
+                  <div>
+                    <h4 class="text-white">Project Title</h4>
+                    <h6 class="text-white">Website Design</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+              <div class="project">
+                <img src="./img/wakamoto.jpg" alt="">
+                <div class="overlay">
+                  <div>
+                    <h4 class="text-white">Project Title</h4>
+                    <h6 class="text-white">Website Design</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- team Section -->
+      <section id="team" class="bg-light"><!--Recent Project Sectionと構成が似ているので複製-->
+        <div class="container"> <!--エリアを100%占めるようにする-->
+          <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-primary">TEAM</h6>
+              <h1>Our Fair & Simple Pricing</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, natus dignissimos, nemo quia, corrupti explicabo doloribus ab id maxime eos distinctio ex harum facilis provident delectus deleniti consequuntur quas quod.</p>
+            </div>
+          </div>
+
+
+        <div class="row g-3">  <!--ここでflexにする-->
+          <div class="col-lg-3 col-sm-6 text-center">  <!-- largeの時には3分割  smallのときには2分割 -->
+            <div class="team-member card-effect">
+              <img src="./img/animal_arupaka.png">
+              <h5 class="m-0 mt-4">Sharbat Khan</h5>
+              <p>Web Developer</p>
+              <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 text-center">  <!-- largeの時には4分割  smallのときには2分割 -->
+            <div class="team-member card-effect">
+              <img src="./img/animal_hiyoko.png">
+              <h5 class="m-0 mt-4">Sharbat Khan</h5>
+              <p>Web Developer</p>
+              <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 text-center">  <!-- largeの時には3分割  smallのときには2分割 -->
+            <div class="team-member card-effect">
+              <img src="./img/animal_mitsubachi.png">
+              <h5 class="m-0 mt-4">Sharbat Khan</h5>
+              <p>Web Developer</p>
+              <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 text-center">  <!-- largeの時には3分割  smallのときには2分割 -->
+            <div class="team-member card-effect">
+              <img src="./img/animal_panda.png">
+              <h5 class="m-0 mt-4">Sharbat Khan</h5>
+              <p>Web Developer</p>
+              <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section id="team" class="bg-light"><!--Recent Project Sectionと構成が似ているので複製-->
+        <div class="container"> <!--エリアを100%占めるようにする-->
+          <div class="row g-4">
+            <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-primary">BLOG</h6>
+              <h1>Latest News from The Blog</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, natus dignissimos, nemo quia, corrupti explicabo doloribus ab id maxime eos distinctio ex harum facilis provident delectus deleniti consequuntur quas quod.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="blog-card card-effect">
+                <img src="./img/londoncalling.png" alt="">
+                <h5 class="mb-0 mt-4"><a href="#">Designing smart and slick Bootstrap Website</a></h5>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, totam deleniti repellendus magni impedit earum?</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="blog-card card-effect">
+                <img src="./img/2toneska.jpg" alt="">
+                <h5 class="mb-0 mt-4"><a href="#">Designing smart and slick Bootstrap Website</a></h5>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, totam deleniti repellendus magni impedit earum?</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="blog-card card-effect">
+                <img src="./img/vaporwave.jpg" alt="">
+                <h5 class="mb-0 mt-4"><a href="#">Designing smart and slick Bootstrap Website</a></h5>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, totam deleniti repellendus magni impedit earum?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact section -->
+      <section id="contact" class="bg-light"><!--Recent Project Sectionと構成が似ているので複製-->
+        <div class="container"> <!--エリアを100%占めるようにする-->
+          <div class="row g-4">
+            <div class="col-md-8 mx-auto text-center">
+              <h6 class="text-primary">CONTACT</h6>
+              <h1>Get In Touch</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, natus dignissimos, nemo quia, corrupti explicabo doloribus ab id maxime eos distinctio ex harum facilis provident delectus deleniti consequuntur quas quod.</p>
+            </div>
+          </div>
+
+          <form action="" class="row g-3 justify-content-center">  <!--rowの下がすべてFlexになっている-->
+            <div class="col-md-5">
+              <!-- form-controlクラスの意味　ズームフォーカスなどを自動反映させるためのクラス -->
+              <input type="text" class="form-control" placeholder="Full Name">
+            </div>
+            <div class="col-md-5">
+              <input type="text" class="form-control" placeholder="Enter E-Mail">
+            </div>
+            <div class="col-md-10">
+              <input type="text" class="form-control" placeholder="Enter Subject">
+            </div>
+            <div class="col-md-10">
+              <textarea class="form-control" cols="30" rows="5" placeholder="Enter Message"></textarea>
+            </div>
+            <div class="col-md-10 d-grid"> <!--全ての幅を収める-->
+              <button class="btn btn-primary">Contact</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-top">
+          <div class="container text-white"> <!--横並びのグリッドを適用したい-->
+            <div class="row">
+              <div class="col-md-4">
+                <h2 class="text-white">Bootstrap5</h2>
+              </div>
+              <div class="col-md-2">
+                <h5 class="text-white">Brand</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Pricing</a></li>
+                </ul>
+              </div>
+
+              <div class="col-md-2">
+                <h5 class="text-white">More</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">FAQs</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Warranty</a></li>
+                  <li><a href="#">Shipment</a></li>
+                </ul>
+              </div>
+
+              <div class="col-md-4">
+                <h5 class="text-white">Pages</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">FAQs</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Warranty</a></li>
+                  <li><a href="#">Shipment</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+/*font取り込みと統一*/
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap');
+
+.sora {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.sora-bold {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
+/*変数定義*/
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+
+}
+
+body {
+    font-family: "Sora", sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+h1, h2, h3, h4, h5, h6, .display-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+/*Navbarサンプル*/
+.navbar .nav-link {
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 16px;
+}
+
+.btn {
+    padding: 14px 18px;
+    border-width: 2px;
+    border-radius: 0;
+}
+
+.hero {
+    background-image: url("./img/cover.jpg");
+    position: center;
+    background-size: cover; /*背景の繰り返し表示防止*/
+    background-attachment: fixed;  /*背景のスクロール防止*/
+    position: relative;  /*疑似要素を関連付けさせる（関連親に設定する）*/
+    z-index: 2; /*ボタンやリンクを推せるように*/
+}
+
+/* 疑似要素 背景をオーバーレイでフェードさせる。 */
+.hero:after {
+    content: "";  /*contentは必須*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;       /*ナビバーと被らないようにheroエリアを基点とした座標値を入れる。*/
+    left: 0;
+    background-color: rgba(36, 37, 35, 0.5);/*アルファ値とは透明度（高いほど不透明）*/
+    z-index: -1; /*ボタンやリンクを推せるように*/
+}
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    padding: 25px;
+    transition: all 0.35s ease; /*ホバー効果*/
+
+/*
+    transitionの左から順のプロパティ
+    transition-property	アニメーションを適用する対象のプロパティを定義する
+    transition-duration	アニメーションの時間を定義する
+    transition-delay	アニメーションを開始するタイミングを定義する
+    transition-timing-function アニメーション変化の度合を定義する
+                                (ease,ease-in,ease-out,ease-in-out,linear,cubic-bezier)
+    cf. https://www.asobou.co.jp/blog/web/css-animation3
+*/
+}
+
+/* transititonには必ず疑似要素をつけること */
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.icon-box {
+    width: 54px;
+    height: 54px;
+    display: flex;   /*ある要素に定義するだけで、その直下の要素が並列になる*/
+    align-items: center; /*縦方向*/
+    justify-content: center; /*横方向*/
+    color: #fff;
+    font-size: 32px;
+    background-color: var(--primary);
+    border-radius: 100px;
+    flex: none;  /*アイコンがモノに当たった場合楕円形になってしまう。（display:flexが効いているから）*/
+}
+
+.service {
+    position: relative;
+    overflow: hidden;   /* 青い四角を隠す*/
+
+}
+
+/*未ホバーの時は青の四角を見せないようにする。*/
+.service::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.35s ease;
+    z-index: 1;
+}
+
+.service:hover h5,  .service:hover p {
+    color:white;
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+    z-index: -1;
+}
+
+.col-img {
+    background-image: url("./img/wakamoto.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+    ;
+}
+
+
+/* Project Section */
+.project {
+    position: relative;
+    overflow: hidden;   /*エリア外を隠す*/
+}
+
+.project .overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 37, 35, 0.5);/*アルファ値とは透明度（高いほど不透明）*/
+    padding: 30px;   /*文字の隅っこを内側に寄せる*/
+    display: flex;
+    align-items: flex-end; /*文字を左下に落とすためにflex状態にする。*/
+    opacity: 0;
+    transition: all 0.4s ease;
+
+}
+
+.img {
+    width: 100%;
+}
+
+.project img {
+    transition: all 0.4s ease;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+
+/* team section */
+.team-member img {
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;  /*人物画像を丸める*/;
+}
+
+
+.social-icons {
+    display: flex;    /*アイコン（全体）の縦並びの開放*/
+    justify-content: center;
+    align-items: center;
+
+}
+
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    color: #fff;
+    /*アイコン(中の方)の中央寄せ*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left: 7px;
+    transition: all 0.4s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    background-color: transparent;
+}
+
+/* contact section */
+.form input.form-control {
+    height: 56px;
+}
+
+.form .form-control {
+    border: transparent;
+    border-radius: 0;
+    background-color: rgba(0,0,0,0.04);
+}
+
+.footer-top {
+    background-color: var(--dark);
+    padding: 90px;
+    padding-bottom: 90px;
+}
+
+.footer-top ul li a {
+    color: var(--body);
+}
