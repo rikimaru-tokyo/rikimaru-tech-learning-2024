@@ -1,59 +1,273 @@
-<!DOCTYPE >
+<!DOCTYPE>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is Wrapper & Container?</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- cf. https://fueru.info/design/html-css/cdn-fontawesome/ および https://cdnjs.com/libraries/font-awesome-->
-    <!-- https://pote-chil.com/blog/fontawesome-local -->
-    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/mycss/s.css">
     <link rel="stylesheet" href="asset/fontawesome/css/all.min.css">
 </head>
+
 <body>
+    <a name="home" class="anchor"></a>
 
+    <!-- Navbar -->
+    <div class='fixed-top'>
+        <nav class="navbar navbar-expand-lg my_navbar">
+            <div class="container">
+
+                <a class="navbar-brand" href="#home">
+                    <h2 class="text-white pt-1">20240412</h2>
+                </a>
+                   
+                <!-- collapse:境界線同士の間隔をとらずにこれらを重ねる -->
+                <!--  navbar-collapse:親ブレークポイントによってナビゲーションバーのコンテンツをグループ化および非表示 -->
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto my_navbar_menu"> <!-- リストが右側に寄る -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#wrapper">Wrapper</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#container">Container</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#links">Links</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <!-- Top Section -->
     <section>
+        <div class="row m-4 row_headline">
+            <div class="container p-2 d-flex">
+                <div class="headline_icon">
+                    <i class="fa-solid fa-person-circle-question"></i> <!-- fa-pull-leftはアイコンの回り込みをなくす-->
+                </div>
+                <div class="mx-3 align-self-center"> <!--texdt-align系はdivには効かない-->
+                    <h2>What is Wrapper & Container?</h2>
+                </div>
+            </div>
+        </div>
+
         <div class="row m-4">
-            <div class="container bg-info p-2">
-                <!-- cf. https://digitalidentity.co.jp/blog/creative/font-awesome.html -->
-                <i class="fa-3x fa-solid fa-person-circle-question fa-pull-left headline_icon"></i>
-                <h2 class="text-white">What is Wrapper & Container?</h2>
+            <div class="container p-1 mx-2">
+                WrapperとContainerとは何か？また、Bootstrapの枠組みの組み合わせのお勉強。
             </div>
         </div>
     </section>
 
-    <p></p>
-
-    <p></p>
-    
-    <p><a href="https://terakoya.sejuku.net/question/detail/15507">https://terakoya.sejuku.net/question/detail/15507</a></p>
-
-    <p><a href="https://masanyon.com/css-class-name-container-wrapper/">https://masanyon.com/css-class-name-container-wrapper/</a></p>
-
-
+    <!-- Wrapper Section -->
     <section>
+        <a name="wrapper" class="anchor"></a>
+        <div class="row m-4 row_headline">
+            <div class="container p-2 d-flex">
+                <div class="headline_icon">
+                    <i class="fa-solid fa-crop-simple"></i>
+                </div>
+                <div class="mx-3 align-self-center">
+                    <h2>Wrapper</h2>
+                </div>
+            </div>
+        </div>
+
+
         <div class="row m-4">
-            <div class="container bg-info p-2">
-                <i class="fa-3x fa-solid fa-book fa-pull-left headline_icon"></i>
-                <h2 class="text-white">参考資料</h2>
-                <ul>
-                    <li><a href="https://note.com/msak717/n/nd39608804fe0">Webデザインについて＃1「コンテナという概念」</a></li>
-                    <li><a href="https://note.com/volpe_web/n/n25265b05e3cc">CSSクラス名containerとwrapperの違い</a></li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
+            <div class="container p-1 mx-2">
+                <div class="wrapper p-2">
+                    <div class="row">
+                        <h5>↑これはWrapperです。</h5>
+                    </div>
+
+                    <div class="row">
+                        <div class="container p-4">
+                            <div class="row d-flex justify-content-center">
+                                <div class="card-effect mx-2">
+                                    <h3>Wrapperとは？</h3>
+                                    <div>
+                                        一般的には、wrapperはデザインのアウトライン用、<br>containerはコンテンツ内の共有幅指定用に利用されていることが多いとおもいます。<br>containerでまとめたものよりさらに外側にあるかたまりをまとめて、<br>それに名前をつけなければならない場合
+                                        wrapperでみたいな感覚です。<br>
+                                    </div>
+                                    <div class="text-end">
+                                        <cite>cf. <a href="https://masanyon.com/css-class-name-container-wrapper/">CSS の
+                                                class名で wrapper と container の違いとは？ 使い分け方について</a></cite>
+                                    </div>
+                                </div>
+
+                                <div class="card-effect mx-2">
+                                    <ul>
+                                        <li>WEBサイト制作にはWrapperの概念を意識する必要がある</li>
+                                        <li>コンテンツは特段の理由がない限りWrapperの中に収める</li>
+                                        <li>Wrapperを守ると単調なサイトしか作れないは誤り</li>
+                                        <li>Wrapperを無視する際は「なぜそれが必要なのか」を自分に問いかける</li>
+                                    </ul>
+                                    <div>
+                                        綺麗なサイトとは何なのかを考えていくと結局、文字、余白、情報の整理、ここらへんが上手くできていれば綺麗に見えるものです。<br>
+                                        それらをうまくまとめるのにWrapperは最適な考え方です。<br>
+                                        定めた大きさの箱の中に配置していくので当然、余白の設定、情報の整理、そして文字の設定にシビアになります。<br>
+                                        だからこそ、逆説的に見た目が整い、ユーザーとしても見やすいサイトが出来上がります。<br>
+                                    </div>
+                                    <div class="text-end">
+                                        <cite>cf. <a
+                                                href="https://www.urban-project.jp/blog/recommended/1862/">Wrapperを理解して綺麗なWEBサイトを制作しよう！</a></cite>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Container Section -->
+    <section>
+        <a name="container" class="anchor"></a>
+        <div class="row m-4 row_headline">
+            <div class="container p-2 d-flex">
+                <div class="headline_icon">
+                    <i class="fa-solid fa-toolbox"></i>
+                </div>
+                <div class="mx-3 align-self-center">
+                    <h2>Container</h2>
+                </div>
+            </div>
+        </div>
 
 
+        <div class="row m-4">
+            <div class="container p-1 mx-2">
+                <div class="wrapper px-4">
+                    <div class="row">
+                        <h5>↑これはWrapperです。</h5>
+                    </div>
+                    <div class="row px-4">
+                        <div class="container in_container m-2">
+                            <div class="row">
+                                <h5>↑これはContainerです。</h5>
+                            </div>
+                            <div class="row row-cols-1">
+                                <div class="container p-1">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="card-effect mx-2">
+                                            <h3>Containerとは？</h3>
+                                            <div>
+                                                <h5>「コンテナ」という概念と必要性</h5>
+                                                コンテナとは画面内のコンテンツの収まる範囲を設定するブロックで、 コンテンツを一定の範囲内で整列させる役割を持ちます。<br>
+                                                 簡単に言うと、「表示エリア」を決めるものです。これを決めることで、<br>
+                                                <ul>
+                                                    <li>整った見やすいサイト</li>
+                                                    <li>ルールがあることで追加要素に対応しやすい</li>
+                                                    <li>管理しやすい コーディング</li>
+                                                </ul>
+                                                に、することができます。<br>
+                                                コンテナを決めない場合、文字や写真が見づらくなります。 <br>
+                                                例えば「幅いっぱいに文章を表示する」と設定した場合、SPだと折り返しがついて読みやすいかもしれませんが、PCだと折り返されず、やたら横に長い文章として表示される可能性があります。<br>
+                                                そうなると読むのが大変面倒臭いので、読みたくなくなります。<br>
+                                            </div>
+                                            <div class="text-end">
+                                                <cite>cf. <a href="https://note.com/msak717/n/nd39608804fe0">Webデザインについて＃1「コンテナという概念」</a></cite>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Link Section -->
+    <section>
+        <a name="links" class="anchor"></a>
+        <div class="row m-4 row_headline">
+            <div class="container p-2 d-flex">
+                <div class="headline_icon">
+                    <i class="fa-solid fa-bookmark"></i>
+                </div>
+                <div class="mx-3 align-self-center">
+                    <h2>参考資料</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-4">
+            <div class="container px-3 mx-2">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group"><a href="https://note.com/msak717/n/nd39608804fe0">Webデザインについて＃1「コンテナという概念」</a></li>
+                    <li class="list-group"><a href="https://note.com/volpe_web/n/n25265b05e3cc">侍テラコヤ - CSSクラス名containerとwrapperの違い</a>
+                    </li>
+                    <li class="list-group"><a href="https://terakoya.sejuku.net/question/detail/15507">containerとwrapper</a></li>
+                    <li class="list-group"><a href="https://masanyon.com/css-class-name-container-wrapper/">CSS の class名で wrapper と
+                            container の違いとは？ 使い分け方について</a></li>
+                    <li class="list-group"><a href="https://digitalidentity.co.jp/blog/creative/font-awesome.html">【最新版】Font Awesome
+                            5でアイコンを表示させよう！</a></li>
+                    <li class="list-group"><a href="https://pote-chil.com/blog/fontawesome-local">【脱CDN】Font
+                            Awesomeをローカルにダウンロードして読み込む方法</a></li>
+                    <li class="list-group"><a href="https://fueru.info/design/html-css/cdn-fontawesome">CDNでFontAwesomeの使い方 free
+                            iconsをCSSで表示する</a></li>
+                    <li class="list-group"><a href="https://programming-cafe.com/programming/html-css/cite-right-bottom">cite(作品タイトル)を右下に表示
+                            コピペで使えるHTML+CSS</a></li>
                 </ul>
-
             </div>
         </div>
     </section>
 
+    <footer>
+        <div class="my_footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>20250412</h2>
+                    </div>
+
+                        <div class="col-md-2">
+                            <h5>Company</h5>
+                            <ul>
+                                <li>Alpha</li>
+                                <li>Bravo</li>
+                                <li>Charlie</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h5>Brand</h5>
+                            <ul>
+                                <li>Delta</li>
+                                <li>Echo</li>
+                                <li>Foxtrot</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h5>Contact Us</h5>
+                            <ul>
+                                <li>Golf</li>
+                                <li>Hotel</li>
+                                <li>India</li>
+                            </ul>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

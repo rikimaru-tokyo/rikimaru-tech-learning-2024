@@ -1,5 +1,103 @@
+body{ 
+    /**
+        fixed-top　対策 他の要素との重複を避けるため
+        cf. https://qiita.com/taku_hito/items/bb8d0957347636b5bf4f 
+    */
+    padding-top: 50px; 
+}
+
+.anchor {
+    /* アンカーリンクがナブバーに隠れる問題。https://www.at-create.co.jp/staff-blog/css/341.html */
+    display: block;
+    padding-top: 50px;
+    margin-top: -50px;
+    height: 70px;
+}
+
+.my_navbar {
+    color: #fff !important;
+    background-color: coral;
+    height: 50px;
+    font-weight: 700;
+}
+
+.my_navbar_menu li a {
+    color: #fff !important;
+    margin-left: 20px;
+    font-weight: 700;
+}
 
 .headline_icon {
     color: white;
+    width: 70px;
+    height: 70px;
+    background-color: coral;
+    font-size: 3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    flex: none;
 }
 
+.row_headline {
+    background-color: white;
+    color: coral;
+}
+
+.card-effect {
+    width: 600px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 25px;
+    transition: all 0.35s ease;
+    /*ホバー効果*/
+}
+
+/* transititonには必ず疑似要素をつけること */
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.wrapper {
+    background-color: peachpuff;
+    border: 1px #CCC solid;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.in_container {
+    background-color: lightgoldenrodyellow;
+    border: 1px #CCC solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+li a {
+    color: coral;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.my_footer {
+    color: white;
+    background-color: coral;
+    padding-top: 30px;
+}
