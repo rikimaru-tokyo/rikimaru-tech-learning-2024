@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/mycss/s.css">
+    <link rel="stylesheet" href="asset/mycss/sample.css">
     <link rel="stylesheet" href="asset/fontawesome/css/all.min.css">
 </head>
 
@@ -27,20 +28,25 @@
                 <a class="navbar-brand" href="#home">
                     <h2 class="text-white pt-1">20240412</h2>
                 </a>
-                   
+
                 <!-- collapse:境界線同士の間隔をとらずにこれらを重ねる -->
                 <!--  navbar-collapse:親ブレークポイントによってナビゲーションバーのコンテンツをグループ化および非表示 -->
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-auto my_navbar_menu"> <!-- リストが右側に寄る -->
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home">Home</a> 
+                            <a class="nav-link active" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="#wrapper">Wrapper</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#container">Container</a> 
+                            <a class="nav-link active" href="#container">Container</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#sample">Example</a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link active" href="#links">Links</a>
                         </li>
@@ -170,7 +176,7 @@
                                             <div>
                                                 <h5>「コンテナ」という概念と必要性</h5>
                                                 コンテナとは画面内のコンテンツの収まる範囲を設定するブロックで、 コンテンツを一定の範囲内で整列させる役割を持ちます。<br>
-                                                 簡単に言うと、「表示エリア」を決めるものです。これを決めることで、<br>
+                                                簡単に言うと、「表示エリア」を決めるものです。これを決めることで、<br>
                                                 <ul>
                                                     <li>整った見やすいサイト</li>
                                                     <li>ルールがあることで追加要素に対応しやすい</li>
@@ -182,7 +188,8 @@
                                                 そうなると読むのが大変面倒臭いので、読みたくなくなります。<br>
                                             </div>
                                             <div class="text-end">
-                                                <cite>cf. <a href="https://note.com/msak717/n/nd39608804fe0">Webデザインについて＃1「コンテナという概念」</a></cite>
+                                                <cite>cf. <a
+                                                        href="https://note.com/msak717/n/nd39608804fe0">Webデザインについて＃1「コンテナという概念」</a></cite>
                                             </div>
                                         </div>
                                     </div>
@@ -193,6 +200,78 @@
                 </div>
             </div>
         </div>
+    </section>
+
+
+    <!-- Sample Section -->
+    <section>
+        <a name="sample" class="anchor"></a>
+        <div class="row m-4 row_headline">
+            <div class="container p-2 d-flex">
+                <div class="headline_icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="mx-3 align-self-center">
+                    <h2>実装例：実際に打ち込んでみた</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row col-lg-8">
+            <div class="my_sample_wrapper px-4">
+                <div class="row">
+                    <h5>↑これはWrapperです。</h5>
+                </div>
+                <div class="row">
+                    <div class="container-fluid my_sample_container">
+                        <div class="row">
+                            <h5>↑これはContainerです。</h5>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 bg-white text-center">
+                                <h4>My Samples</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, rem?</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="container column-md-8 photo_container">
+                                <div class="my_image mx-3">
+                                    <a href="#">
+                                        <img src="./asset/images/cafe_osyaberi_school_girls.png" class="my_image">
+                                        <div class="overlay">
+                                            <div>
+                                                <h5>Sample</h5>
+                                                <p>Lorem ipsum dolor sit.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="my_image mx-3">
+                                    <a href="#">
+                                        <img src="./asset/images/job_cafe_tenin_man.png" class="my_image">
+                                        <div class="overlay">
+                                            <div>
+                                                <h5>Sample</h5>
+                                                <p>Lorem, ipsum dolor.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="my_image mx-3">
+                                    <a href="#">
+                                        <img src="./asset/images/menu_tenin_yobu.png" class="my_image">
+                                        <div class="overlay">
+                                            <div>
+                                                <h5>Sample</h5>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!-- Link Section -->
@@ -212,24 +291,33 @@
         <div class="row m-4">
             <div class="container px-3 mx-2">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group"><a href="https://note.com/msak717/n/nd39608804fe0">Webデザインについて＃1「コンテナという概念」</a></li>
-                    <li class="list-group"><a href="https://note.com/volpe_web/n/n25265b05e3cc">侍テラコヤ - CSSクラス名containerとwrapperの違い</a>
+                    <li class="list-group"><a href="https://note.com/msak717/n/nd39608804fe0"
+                            target="_blank">Webデザインについて＃1「コンテナという概念」</a></li>
+                    <li class="list-group"><a href="https://note.com/volpe_web/n/n25265b05e3cc" target="_blank">侍テラコヤ -
+                            CSSクラス名containerとwrapperの違い</a>
                     </li>
-                    <li class="list-group"><a href="https://terakoya.sejuku.net/question/detail/15507">containerとwrapper</a></li>
-                    <li class="list-group"><a href="https://masanyon.com/css-class-name-container-wrapper/">CSS の class名で wrapper と
+                    <li class="list-group"><a href="https://terakoya.sejuku.net/question/detail/15507"
+                            target="_blank">containerとwrapper</a></li>
+                    <li class="list-group"><a href="https://masanyon.com/css-class-name-container-wrapper/"
+                            target="_blank">CSS の class名で wrapper と
                             container の違いとは？ 使い分け方について</a></li>
-                    <li class="list-group"><a href="https://digitalidentity.co.jp/blog/creative/font-awesome.html">【最新版】Font Awesome
+                    <li class="list-group"><a href="https://digitalidentity.co.jp/blog/creative/font-awesome.html"
+                            target="_blank">【最新版】Font Awesome
                             5でアイコンを表示させよう！</a></li>
-                    <li class="list-group"><a href="https://pote-chil.com/blog/fontawesome-local">【脱CDN】Font
+                    <li class="list-group"><a href="https://pote-chil.com/blog/fontawesome-local"
+                            target="_blank">【脱CDN】Font
                             Awesomeをローカルにダウンロードして読み込む方法</a></li>
-                    <li class="list-group"><a href="https://fueru.info/design/html-css/cdn-fontawesome">CDNでFontAwesomeの使い方 free
+                    <li class="list-group"><a href="https://fueru.info/design/html-css/cdn-fontawesome"
+                            target="_blank">CDNでFontAwesomeの使い方 free
                             iconsをCSSで表示する</a></li>
-                    <li class="list-group"><a href="https://programming-cafe.com/programming/html-css/cite-right-bottom">cite(作品タイトル)を右下に表示
+                    <li class="list-group"><a href="https://programming-cafe.com/programming/html-css/cite-right-bottom"
+                            target="_blank">cite(作品タイトル)を右下に表示
                             コピペで使えるHTML+CSS</a></li>
                 </ul>
             </div>
         </div>
     </section>
+
 
     <footer>
         <div class="my_footer">
@@ -239,35 +327,41 @@
                         <h2>20250412</h2>
                     </div>
 
-                        <div class="col-md-2">
-                            <h5>Company</h5>
-                            <ul>
-                                <li>Alpha</li>
-                                <li>Bravo</li>
-                                <li>Charlie</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-2">
-                            <h5>Brand</h5>
-                            <ul>
-                                <li>Delta</li>
-                                <li>Echo</li>
-                                <li>Foxtrot</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-2">
-                            <h5>Contact Us</h5>
-                            <ul>
-                                <li>Golf</li>
-                                <li>Hotel</li>
-                                <li>India</li>
-                            </ul>
-                        </div>
+                    <div class="col-md-2">
+                        <h5>Company</h5>
+                        <ul>
+                            <li>Alpha</li>
+                            <li>Bravo</li>
+                            <li>Charlie</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h5>Brand</h5>
+                        <ul>
+                            <li>Delta</li>
+                            <li>Echo</li>
+                            <li>Foxtrot</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h5>Contact Us</h5>
+                        <ul>
+                            <li>Golf</li>
+                            <li>Hotel</li>
+                            <li>India</li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>
         </div>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>

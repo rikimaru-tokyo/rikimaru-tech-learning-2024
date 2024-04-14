@@ -19,6 +19,7 @@ body{
     background-color: coral;
     height: 50px;
     font-weight: 700;
+    z-index: 999;
 }
 
 .my_navbar_menu li a {

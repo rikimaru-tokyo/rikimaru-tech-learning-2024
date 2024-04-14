@@ -1,0 +1,72 @@
+/*「実装例：実際に打ち込んでみた」のCSS、およびBootstrap入門のおさらい
+- wrapper
+- container
+- img
+- transition
+- overlay
+*/
+
+.my_sample_wrapper {
+    margin: 50px;
+    padding: 10px;
+    background-color: goldenrod;
+    border: 1px solid #999;
+}
+
+.my_sample_container {
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #000;
+    width: 90%;
+}
+
+.my_image {
+    /*
+    positionプロパティの種類は、「static（初期値）」、「relative」、「absolute」、「fixed」がある。 
+    relativeは「相対的」、absoluteは「絶対的」、fixedは「固定配置」と覚えよう。
+    absoluteを指定する際は、親要素をposition:relative;にすること。
+       cf. https://mdstage.com/html-css/css-intermediate/position
+    */
+    position: relative;
+    overflow: hidden;   /*エリア外を隠す*/
+    border: 1px solid #eee;
+    width: 200px;
+    height: 200px;
+}
+
+.my_image img {
+    width: 200px;
+    height: 200px;
+    transition: all 0.4s ease;
+}
+
+.my_image:hover img {
+    transform: scale(1.1);
+}
+
+.my_image .overlay {
+    /*通常時はoverlay部分の初期値設定と隠す。*/
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 200px;
+    height: 200px;
+    color: white;
+    background-color: rgba(66,66,66, 0.3);
+    padding: 5px;   /*文字の隅っこを内側に寄せる*/
+    display: flex; 
+    align-items: flex-end; /*文字を左下に落とすためにflex状態にする。*/
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.my_image:hover .overlay {
+    /* hover時には隠したoverlayを表示させる。 */
+    opacity: 1;
+}
+
+.photo_container {
+    display: flex;
+    justify-content: center;
+}
