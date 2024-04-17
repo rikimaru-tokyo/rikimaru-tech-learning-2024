@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form Lesson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/my.css">
+    <link rel="stylesheet" href="../20240412/asset/fontawesome/css/all.min.css">
+
+    <!-- FlatpickrのCSS cf. https://note.com/dctm/n/n45af36a98d2c-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <!-- Header Area -->
+    <header class="my_header">
+        <h2> Form Lesson 01 </h2>
+    </header>
+
+    <main>
+        <!-- Form Area -->
+        <div class="row">
+            <div class="container form_container col-md-8">
+                <div class="row d-flex py-5">
+                    <div class="col-md-8 container form_inner_area">
+                        <form action="#" method="post">
+                            <div class="form_group p-3">
+                                <div class="row my-3">
+                                    <label class="text-end w-25 mt-1" for="yourname">ご氏名：</label>
+                                    <div class="col-md-6">
+                                        <input type="text" name="yourname" class="form-control" id="yourname"
+                                            placeholder="例題 太郎">
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <label class="text-end w-25 mt-1" for="youremail">e-mail：</label>
+                                    <div class="col-md-6">
+                                        <input type="email" name="youremail" class="form-control" id="youremail"
+                                            placeholder="example@example.com">
+                                    </div>
+                                </div>
+
+                                <div class="row my-3">
+                                    <label class="text-end w-25 mt-1">都道府県：</label>
+                                    <div class="col-md-6">
+                                        <select name="pref" class="form-select" id="pref">
+                                            <option value="">都道府県</option>
+                                            <option value="1">北海道</option>
+                                            <option value="2">東北</option>
+                                            <option value="3">関東</option>
+                                            <option value="4">甲信越</option>
+                                            <option value="5">東海</option>
+                                            <option value="6">関西</option>
+                                            <option value="7">山陰・山陽</option>
+                                            <option value="8">九州・沖縄</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row my-3">
+                                    <label class="text-end w-25 mt-1">ラジオボタン：</label>
+                                    <div class="col-md-6 m-1">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="have_car" id="radio_1"
+                                                value="1">
+                                            <label class="form-check-label" for="radio_1">有</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="have_car" id="radio_2"
+                                                value="0">
+                                            <label class="form-check-label" for="radio_2">無</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row my-3">
+                                    <label class="text-end w-25 mt-1">チェックボックス：</label>
+                                    <div class="col-md-6 m-1">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="case[]" id="case1"
+                                                value="1">
+                                            <label class="form-check-label" for="case1">選択肢１</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="case[]" id="case2"
+                                                value="2">
+                                            <label class="form-check-label" for="case2">選択肢２</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row my-3">
+                                    <label class="text-end w-25 mt-1">カレンダー：</label>
+                                    <div class="col-md-6 m-1">
+                                        <!-- https://www.geeksforgeeks.org/bootstrap-5-input-group-wrapping/ -->
+                                        <div class="input-group flex-nowrap flatpickr">
+                                            <input type="text" name="my_date" class="form-control" id="my_datepickr" data-input>
+                                            <a class="input-group-text input-button" id="cal_icon" data-toggle>
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row my-3">
+                                    <label class="text-end w-25 mt-1">時間：</label>
+                                    <div class="col-md-6 m-1">
+                                        <div class="input-group flex-nowrap timepickr">
+                                            <input type="text" name="my_time" class="form-control" id="my_timepickr" data-input>
+                                            <span class="input-group-text" id="time_icon" data-toggle>
+                                                <i class="fa-solid fa-clock"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3 py-3 border-top">
+                                    <!-- row に直接d-flexを仕掛けても無効なので注意-->
+                                    <div class="d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-danger">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="my_footer d-flex justify-content-center p-2">
+        <h6>(C) rikimaru All rights reserved 2024</h6>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <!-- FlatpickrのJS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- 日本語にする場合は下記を追記 -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+
+    <script src="./assets/myjs/my.js"></script>
+
+</body>
+
+</html>

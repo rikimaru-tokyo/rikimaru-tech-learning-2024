@@ -1,0 +1,77 @@
+/* My CSS 20240415 */
+
+.body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+.my_header {
+    /*  https://webukatu.com/wordpress/blog/11840/  */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff !important;
+    background-color: #C06;
+    height: 50px;
+    font-weight: 700;
+    z-index: 999;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+
+main {
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+.form_container {
+    min-height: 500px;
+    background-color: #fff;
+    border: 1px solid #CCC;
+    box-shadow: 0 8px 22px rgba(0,0, 0, 0.3)
+}
+
+
+.form_inner_area {
+    background-color: #fff;
+    border: 1px solid #C06;
+    border-radius: 10px;
+}
+
+
+label {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #C06;
+}
+
+.form-check-input:checked {
+    /* https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10243937460 */
+    background-color: #C06 !important;
+}
+
+.my_footer {
+    /* https://webukatu.com/wordpress/blog/11921/ */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff !important;
+    background-color: #C06;
+    height: 30px;
+    z-index: 999;
+}
