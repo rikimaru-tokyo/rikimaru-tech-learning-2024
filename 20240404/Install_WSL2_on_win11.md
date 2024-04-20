@@ -18,10 +18,7 @@ https://dev.classmethod.jp/articles/how-to-setup-wsl2-for-windows11
 
 ## 「Linux カーネル更新プログラム パッケージ」インストール並びにWSLバージョン設定
 
-1. 下記(※注)Linux カーネル更新プログラム パッケージをDL＆インストールする
-
-(※注) 
-https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+1. [Linux カーネル更新プログラム パッケージ](https://learn.microsoft.com/ja-jp/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)をDLして実行する．
 
 
 2. WSL2 を規定のバージョンとして設定する
@@ -30,12 +27,27 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 wsl --set-default-version 2
 ```
 
+3. インストール開始
 
-cf.
+```
+wsl --list --online
+
+wsl --update
+
+wsl --install -d Ubuntu-22.04
+
+wsl --set-version Ubuntu 20.04.6 2
+
+```
+
+
+https://qiita.com/ryome/items/240f36923f5cb989da27
+
 https://learn.microsoft.com/ja-jp/windows/wsl/install-manual
 
-
-
+インストール後
+`wslregisterdistribution failed with error: 0x800701bc`
+がでたら、[Linux カーネル更新プログラム パッケージ](https://learn.microsoft.com/ja-jp/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)をDLして実行する．
 
 
 

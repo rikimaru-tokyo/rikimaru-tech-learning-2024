@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form Lesson 02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/my.css">
+    <link rel="stylesheet" href="../20240412/asset/fontawesome/css/all.min.css">
+
+    <!-- FlatpickrのCSS cf. https://note.com/dctm/n/n45af36a98d2c-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <!-- Header Area -->
+    <header class="my_header">
+        <h2> Form Lesson 02 (File Uploader) </h2>
+    </header>
+
+    <main>
+        <!-- Form Area -->
+        <div class="row">
+            <div class="container form_container col-md-8">
+                <div class="row d-flex py-5">
+                    <div class="col-md-8 container form_inner_area">
+                        <form action="#" method="post">
+                            <div class="form_group p-3">
+
+
+                                <div class="row mt-3 py-3 border-top">
+                                    <!-- row に直接d-flexを仕掛けても無効なので注意-->
+                                    <div class="d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-danger">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="my_footer d-flex justify-content-center p-2">
+        <h6>(C) rikimaru All rights reserved 2024</h6>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <!-- FlatpickrのJS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- 日本語にする場合は下記を追記 -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+
+    <script src="./assets/myjs/my.js"></script>
+
+</body>
+
+</html>
+
+<!-- WebAPI でファイルをアップロードする方法アレコレ -->
+<!-- https://qiita.com/mserizawa/items/7f1b9e5077fd3a9d336b -->
+<!-- enctype  multipart/form-data Base64の方法がある-->
+
+
+<!-- APIサーバでのデータの送信方式の整理 -->
+<!-- https://redj.hatenablog.com/entry/2022/08/13/172415 -->
+
+<!-- https://www.cresco.co.jp/blog/entry/710.html -->
+
+<!-- https://adminkit.io/docs/forms/file-upload/ -->
