@@ -24,6 +24,7 @@ https://dev.classmethod.jp/articles/how-to-setup-wsl2-for-windows11
 2. WSL2 を規定のバージョンとして設定する
 
 ```
+wsl --version
 wsl --set-default-version 2
 ```
 
@@ -73,4 +74,13 @@ SUSE-Linux-Enterprise-Server-15-SP4    SUSE Linux Enterprise Server 15 SP4
 SUSE-Linux-Enterprise-15-SP5           SUSE Linux Enterprise 15 SP5
 openSUSE-Tumbleweed                    openSUSE Tumbleweed
 
+# カーネルバージョンも確認しよう
+
+wsl --version
+
+wsl -l -v
+  NAME            STATE           VERSION
+* Ubuntu-20.04    Stopped         2
+
+wsl --set-version Ubuntu-20.04 2
 ```
